@@ -112,7 +112,7 @@ def test_set_book_genre_genre_from_list_set_ok(self):
     def test_add_book_in_favorites_add_book_out_of_list_not_possible(self, collector_book):
         collector_book.add_book_in_favorites('Гордость и предубеждение и зомби')
         collector_book.add_book_in_favorites('It')
-        collector_book.add_book_in_favorites('The Fall of the House of Usher')
+        collector_book.add_book_in_favorites('The Picture of Dorian Gray')
         fav_book = collector_book.get_list_of_favorites_books()
         assert 'The Fall of the House of Usher' not in fav_book
 

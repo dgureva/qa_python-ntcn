@@ -1,0 +1,29 @@
+[33mcommit 832d91336497c12ee58ad490fb082868cb3ebb7b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Daria Gureva <gurjewa.dasch@yandex.ru>
+Date:   Sun Dec 15 10:12:09 2024 +0000
+
+    Добавлено .gitignore
+
+[33mcommit 95ad8a46ff821f6cb52a51ece9d06b7b11ae70f1[m
+Author: Daria Gureva <gurjewa.dasch@yandex.ru>
+Date:   Sun Dec 15 10:01:34 2024 +0000
+
+    Создан файл conftest.py
+
+[33mcommit 5073376c7ba71880a0f69e0e237dbd1ba4e3b166[m
+Author: Daria Gureva <gurjewa.dasch@yandex.ru>
+Date:   Sun Dec 15 12:39:14 2024 +0300
+
+    new_commit
+
+[33mcommit a09a22db17f3c46e367b2e349367ecc116e9038f[m
+Author: Daria Gureva <gurjewa.dasch@yandex.ru>
+Date:   Sun Dec 15 11:47:57 2024 +0300
+
+    First commit
+
+[33mcommit afe19c8cd53fd52db235ad72b099cca98652989c[m
+Author: Дарья <dgureva96@gmail.com>
+Date:   Sun Dec 15 10:26:42 2024 +0300
+
+    Initial commit
