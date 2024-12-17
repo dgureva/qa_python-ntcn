@@ -1,14 +1,17 @@
 import pytest
 from main import BooksCollector
 
+@pytest.fixture
+def create_new_book():
+    collector = BooksCollector()
+    collector.add_new_book('Властелин колец')
+    return collector
 
 @pytest.fixture
-def collector_book():
-    collector_book = BooksCollector()
-    collector_book.add_new_book('Гордость и предубеждение и зомби')
-    collector_book.add_new_book('Что делать, если ваш кот хочет вас убить')
-    collector_book.add_new_book('It')
-    collector_book.set_book_genre('Гордость и предубеждение и зомби', 'Ужасы')
-    collector_book.set_book_genre('Что делать, если ваш кот хочет вас убить', 'Ужасы')
-    collector_book.set_book_genre('It', 'Комедии')
-    return collector_book
+def create_new_books_with_genres():
+    collector = BooksCollector()
+    collector.add_new_book('Властелин колец')
+    collector.set_book_genre('Властелин колец', 'Фантастика')
+    collector.add_new_book('Зов Ктулху')
+    collector.set_book_genre('Зов Ктулху', 'Ужасы')
+    return collector
