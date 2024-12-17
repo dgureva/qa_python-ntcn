@@ -1,28 +1,28 @@
-# qa_python_4
-# В данном проекте написаны тесты для приложения BooksCollector.
-# Описание тестов выглядит следующим образом:
-- test_add_new_book_add_two_books: Проверяет возможность добавления двух новых книг в коллекцию.
-
-- test_init_all_genre_exist: Этот тест включает несколько под-тестов для различных жанров: Фантастика, Ужасы, Детективы, Мультфильмы, Комедии. Каждый под-тест проверяет, что при инициализации коллекции все указанные жанры присутствуют.
-
-- test_set_book_genre_genre_from_list_set_ok: Проверяет установку жанра книги, когда указанный жанр присутствует в допустимом списке жанров.
-
-- test_set_book_genre_genre_out_of_list_not_set: Проверяет попытку установить жанр книги, который отсутствует в допустимом списке жанров.
-
-- test_get_book_genre_return_genre_set: Проверяет корректность получения установленного жанра книги.
-
-- test_get_books_with_specific_genre_get_two_books_the_same_genre_of_three: Проверяет получение книг с определенным жанром.
-
-- test_get_books_for_children_get_one_book_without_age_rating_of_three: Проверяет получение детских книг, т.е. книг без возрастного ограничения.
-
-- test_add_book_in_favorites_add_two_new_books: Проверяет добавление двух новых книг в список избранного.
-
-- test_add_book_in_favorites_add_book_one_more_time_not_possible: Проверяет невозможность повторного добавления одной и той же книги в список избранного.
-
-- test_add_book_in_favorites_add_book_out_of_list_not_possible: Проверяет невозможность добавления несуществующей книги в список избранного.
-
-- test_delete_book_from_favorites_remove_one_book_possible: Проверяет возможность удаления книги из списка избранного.
-
-- test_get_list_of_favorites_books_return_list_of_favorites_books_successfully: Проверяет корректность получения списка избранных книг.
-
-# Все эти тесты помогают убедиться, что класс BooksCollector функционирует должным образом и обеспечивает корректное управление коллекцией книг, включая такие операции, как добавление, установка жанров, фильтрация по жанрам, работа со списком избранного и другое.
+**Тестирование приложения BooksCollector**
+# Тесты:
+1) **Метод add_new_book:**
+- test_add_new_book_add_three_books - добавление трех книг в словарь
+- test_add_new_book_add_books_without_name - невозможность добавить книгу без названия
+- test_add_new_book_add_book_again - невозможность добавить одну и ту же книгу повторно (проверяется метод **get_books_genre**)
+- test_add_new_book_add_book_over_40_symbols - невозможность добавить книгу с названием длиннее 40 символов
+2) **Метод set_book_genre:**
+- test_set_book_genre_set_real_genre - добавление существующего жанра к существующей в словаре книге (проверяется метод **get_book_genre**)
+- test_set_book_genre_set_unreal_genre - невозможность добавления несуществующего жанра к существующей в словаре книге
+- test_set_book_genre_set_genre_without_book - невозможность добавления жанра к несуществующей в словаре книге
+3) **Метод get_book_genre (во 2 методе проведена позитивная проверка):**
+- test_get_book_genre_book_without_genre - невозможность получения жанра от книги с неуказанным жанром
+4) **Метод get_books_with_specific_genre:**
+- test_get_books_with_specific_genre_real_genre - выборка по жанру с добавленными книгами с существующим жанром
+- test_get_books_with_specific_genre_without_books - невозможность выбрать книги по существующему жанру, если в нем отсутствуют книги
+5) **Метод get_books_for_children:**
+- test_get_books_for_children_child_rating - выборка книг по возрастному рейтингу
+- test_get_books_for_children_without_books - невозможность выборки книг, если рейтинг не подходит для детей
+6) **Метод add_book_in_favorites:**
+- test_add_book_in_favorites_real_book - добавление существующей книги в избранное (проверяется метод **get_list_of_favorites_books**)
+- test_add_book_in_favorites_add_book_again - невозможность добавить одну и ту же книгу в избранное повторно
+- test_add_book_in_favorites_unreal_book - невозможность добавить несуществующую книгу в избранное
+7) **Метод delete_book_from_favorites:**
+- test_delete_book_from_favorites_real_book - удаление существующей в списке избранное книги из списка
+- test_delete_book_from_favorites_unreal_book - невозможность удаления несуществующей в списке избранное книги из списка
+8) **Метод get_list_of_favorites_books (в 6 методе проведена позитивная проверка):**
+- test_get_list_of_favorites_books_empty_list - получение пустого списка избранное, если в нем отсутсвуют книги
