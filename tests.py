@@ -77,7 +77,7 @@ class TestBooksCollector:
     def test_add_book_in_favorites_unreal_book(self):
         collector = BooksCollector()
         collector.add_book_in_favorites('Паддингтон')
-        assert book.favorites == []
+        assert collector.favorites == []
 
 
     def test_delete_book_from_favorites_real_book(self, create_new_book):
@@ -88,7 +88,7 @@ class TestBooksCollector:
     def test_delete_book_from_favorites_unreal_book(self):
         collector = BooksCollector()
         collector.delete_book_from_favorites('Паддингтон')
-        assert book.favorites == []
+        assert collector.favorites == []
 
 
     def test_get_list_of_favorites_books_empty_list(self, create_new_book):
