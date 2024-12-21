@@ -93,3 +93,12 @@ class TestBooksCollector:
 
     def test_get_list_of_favorites_books_empty_list(self, create_new_book):
         assert create_new_book.favorites == []
+
+    def test_get_books_genre_collection_returned(self, create_new_books_with_genres):
+        collector = create_new_books_with_genres
+        result = collector.get_books_genre()
+        expected_result = {
+            'Властелин колец': 'Фантастика',
+            'Зов Ктулху': 'Ужасы'
+        }
+        assert result == expected_result
